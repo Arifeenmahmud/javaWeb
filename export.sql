@@ -1,0 +1,49 @@
+--------------------------------------------------------
+--  File created - Monday-June-13-2022   
+--------------------------------------------------------
+DROP TABLE "HR"."STUDENT2";
+--------------------------------------------------------
+--  DDL for Table STUDENT2
+--------------------------------------------------------
+
+  CREATE TABLE "HR"."STUDENT2" 
+   (	"ID" NUMBER(10,0), 
+	"NAME" VARCHAR2(30 BYTE), 
+	"AGE" NUMBER(4,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+REM INSERTING into HR.STUDENT2
+SET DEFINE OFF;
+Insert into HR.STUDENT2 (ID,NAME,AGE) values (313,'dfg',21);
+Insert into HR.STUDENT2 (ID,NAME,AGE) values (6,'sdg',321);
+Insert into HR.STUDENT2 (ID,NAME,AGE) values (2,'sdg',321);
+Insert into HR.STUDENT2 (ID,NAME,AGE) values (3,'sdg',321);
+Insert into HR.STUDENT2 (ID,NAME,AGE) values (4,'sdg',321);
+Insert into HR.STUDENT2 (ID,NAME,AGE) values (1,'sdg',321);
+Insert into HR.STUDENT2 (ID,NAME,AGE) values (524,'ikh',54);
+Insert into HR.STUDENT2 (ID,NAME,AGE) values (5,'sdg',321);
+--------------------------------------------------------
+--  DDL for Index SYS_C0010614
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "HR"."SYS_C0010614" ON "HR"."STUDENT2" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  Constraints for Table STUDENT2
+--------------------------------------------------------
+
+  ALTER TABLE "HR"."STUDENT2" ADD PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
